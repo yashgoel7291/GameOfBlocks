@@ -2,7 +2,7 @@
 SnT_Summer_Project
 1) Assignment 1
 
-In this code, I have used the class MessageDigest for the package "security" in java to use the SHA-256 method to get the hash value in bytes for the
+In this code, I have used the class MessageDigest from the package "security" in java to use the SHA-256 method to get the hash value in bytes for the
 appended message(Entered by user + the value to be calculated).
 
 I have build a 'bytesToHex(byte[] bytes)' function that returns the Hexadecimal String value of the hash(in bytes). In this function , using for loop we get the 
