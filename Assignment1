@@ -1,0 +1,68 @@
+import java.security.MessageDigest;
+import java.util.Scanner;
+class SHA256InJava
+ {
+public static void main(String[] args)
+{
+ long start=System.nanoTime();
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter the String");
+ String str = sc.nextLine();
+ try{
+    int i=0;
+    MessageDigest digest = MessageDigest.getInstance("SHA-256");
+    while(true)
+    {
+    String data=str+i;
+    byte[] hash = digest.digest(data.getBytes("UTF-8"));
+    boolean b = check(bytesToHex(hash),5);
+    if(b)
+    {
+    //System.out.println(String.format("%64X" , data.getBytes()));
+    System.out.println("The Required number is = " + i );
+    break;
+    }
+    else
+    i++;
+ }
+ }
+catch(Exception e)
+{
+    System.out.println(e);
+}
+long end = System.nanoTime();
+long time = end - start;
+System.out.println("Time Of Execution = " + time + " Nanoseconds");
+ }
+
+
+
+ public String bytesToHex(byte[] bytes) 
+ {
+StringBuffer hexChars = new StringBuffer();
+for( byte b : bytes)
+{
+    int decimal = (int) b & 0xff;
+    String hex = Integer.toHexString(decimal);
+    if(hex.length()==1)
+    {
+        hex = '0' + hex;
+    }
+    hexChars.append(hex);
+}
+return (hexChars.toString());
+}
+static boolean check(String st, int n)
+{
+    boolean b = true;
+        for(int i=0;i<n;i++)
+        {
+            if(st.charAt(i)!='0')
+            {
+                b = false;
+                break;
+            }
+        }
+        return b;
+    }
+ }
