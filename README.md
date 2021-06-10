@@ -1,6 +1,6 @@
 # GameOfBlocks
 SnT_Summer_Project
-1) Assignment 1
+1) # Assignment 1
 
 In this code, I have used the class MessageDigest from the package "security" in java to use the SHA-256 method to get the hash value in bytes for the
 appended message(Entered by user + the value to be calculated).
@@ -15,8 +15,8 @@ hash value less than  0x00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
 Then we print the required number along with the time that the code took to get this nonce value.
 
-2)Assignment 2
-# Instructions to test the contract
+2) # Assignment 2
+## Instructions to test the contract
 
 
 1.Open the Remix IDE and create a new *.sol file.
