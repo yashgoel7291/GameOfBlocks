@@ -67,7 +67,7 @@ contract Loan is MetaCoin {
     
     function reqLoan(uint256 principle, uint rate, uint time) public payable returns(bool correct) {
         uint256 toPay = getCompoundInterest(principle, rate, time);
-        loans[msg.sender] += toPay;
+        loans[msg.sender] = principle + toPay;
         emit Request(msg.sender, principle , rate , time , loans[msg.sender]) ;
         return true;
     }
@@ -93,12 +93,7 @@ contract Loan is MetaCoin {
         if (b)
         loans[ad]=0;
     }
-		function addLoansMap(address payable ad , uint256 amount) public payable
-		{
-		    loans [ad] += amount;
-		    balances[ad] +=0;
-		}
-    
+
     // implement viewDues and settleDues which allow *ONLY* the owner to *view* and *settle* his loans respectively. They take in the address of a creditor as arguments. viewDues returns a uint256 corresponding to the due amount, and does not modify any state variables. settleDues returns a bool, true if the dues were settled and false otherwise. Remember to set the the pending loan to 0 after settling the dues.
     // use sendCoin function of MetaCoin contract to send the coins required for settling the dues.
     
