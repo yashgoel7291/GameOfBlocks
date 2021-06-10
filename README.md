@@ -25,9 +25,12 @@ Then we print the required number along with the time that the code took to get 
 
 3.On the Left SideBar in Remix IDE , choose the First Account( Let this be Owner) and Deploy the Contract.
 
-4.  # Initialising the Mapping loans.
+4.  ### Initialising the Mapping loans.
+
 A)I have  created an “addLoansMap” function to initialise the loans map.
+
 B)From the Left SideBar Choose the Second Address( Let this be person A to whom Owner owes amount 10000).
+
 C)Copy the Address of A and paste in the addLoansMap( address , amount)  in the Deployed Contract along with Amount 10000 and Click addLoansMap.
 
 5. Now request Loan using reqLoan( Principle , Rate , Time )
@@ -36,9 +39,11 @@ And write the Principle Amount , Rate and Time and Click reqLoan.
 6. Now Choose the Owner’s Account from the Left SideBar.
 
 7. TO VIEW THE DUES OWED BY OWNER
+
 Write the Address of A in the viewDues function and Click viewDues.
 
 8. TO SETTLE THE DUES
+
 Write the Address of A in the settleDues function and Click settleDues.
 
 9. To Check if everything went well , Check the OwnerBalance by Clicking getOwnerBalance.
@@ -49,12 +54,19 @@ Write the Address of A in the settleDues function and Click settleDues.
 
 
 SAMPLE INPUT:
+
 Principle Amount - 10000
+
 Rate(in %) - 10
+
 Time(in Years) - 2
+
 SAMPLE OUTPUT:
+
 Compound Interest - 2100
+
 Total Dues - 10000 + 2100 = 12100
+
 Balances before settling Dues => Owner = 100000 ,  A   = 0
                                                        
 Balances after settling Dues => Owner = 87900 , A  = 12100
