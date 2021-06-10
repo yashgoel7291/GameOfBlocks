@@ -25,13 +25,7 @@ Then we print the required number along with the time that the code took to get 
 
 3.On the Left SideBar in Remix IDE , choose the First Account( Let this be Owner) and Deploy the Contract.
 
-4.  ### Initialising the Mapping loans.
-
-A)I have  created an “addLoansMap” function to initialise the loans map.
-
-B)From the Left SideBar Choose the Second Address( Let this be person A to whom Owner owes amount 10000).
-
-C)Copy the Address of A and paste in the addLoansMap( address , amount)  in the Deployed Contract along with Amount 10000 and Click addLoansMap.
+4. From the Left SideBar Choose the Second Address( Let this be person A to whom Owner owes amount 10000).
 
 5. Now request Loan using reqLoan( Principle , Rate , Time )
 And write the Principle Amount , Rate and Time and Click reqLoan.
