@@ -38,7 +38,7 @@ Then we print the required number along with the time that the code took to get 
 <img width="1440" alt="Screenshot 1943-05-06 at 6 44 49 PM" src="https://user-images.githubusercontent.com/77124129/127329304-18108564-d123-4fed-9bba-a45ca9fee165.png">
 
 
-2) # Assignment 2
+# 2) Assignment 2
 ## Instructions to test the contract
 
 
@@ -70,7 +70,7 @@ Write the Address of A in the settleDues function and Click settleDues.
 
 
 
-SAMPLE INPUT:
+## SAMPLE INPUT , OUTPUT:
 
 Principle Amount - 10000
 
@@ -78,14 +78,18 @@ Rate(in %) - 10
 
 Time(in Years) - 2
 
-SAMPLE OUTPUT:
+
 
 Compound Interest - 2100
 
 Total Dues - 10000 + 2100 = 12100
 
 Balances before settling Dues => Owner = 100000 ,  A   = 0
-                                                       
+
 Balances after settling Dues => Owner = 87900 , A  = 12100
+                                                       ![Assignment2 001](https://user-images.githubusercontent.com/77124129/127336506-8aa5d4dc-799f-4d91-976e-a49186d22abb.jpeg)
+![Assignment2 002](https://user-images.githubusercontent.com/77124129/127336562-a594d4ce-03e4-4eb5-9e9b-172fbe0c6b3e.jpeg)
+
+
                                                         
 
