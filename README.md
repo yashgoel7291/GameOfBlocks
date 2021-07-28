@@ -1,19 +1,42 @@
 # GameOfBlocks
 SnT_Summer_Project
-1) # Assignment 1
+# 1) Assignment 1
 
+## Problem Statement
+Write a program that takes some data as string input. Then it tries to find a positive number x such that when x is appended to the end of the string, the SHA256 hash of this new string is less than the target, which is
+
+0x00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+
+Also print the time it takes to get this nonce value. 
+
+## class and functions used
+
+### 1)class MessageDigest
 In this code, I have used the class MessageDigest from the package "security" in java to use the SHA-256 method to get the hash value in bytes for the
 appended message(Entered by user + the value to be calculated).
 
-I have build a 'bytesToHex(byte[] bytes)' function that returns the Hexadecimal String value of the hash(in bytes). In this function , using for loop we get the 
+### 2)Function bytesToHex(byte[] bytes)
+A 'bytesToHex(byte[] bytes)' function that returns the Hexadecimal String value of the hash(in bytes). In this function , using 'for' loop we get the 
 corresponding hexString(using Integer.toHexString function) of every byte in the array bytes and append these hexStrings and return the String.
 
-I have build a 'check(String st, int n)' function to verify if the message st starts with n zero's or not, if yes then this returns true else returns false.
+### 3)Function check(String st, int n)
+A 'check(String st, int n)' function to verify if the message 'st' starts with n zero's or not, if yes then this returns true else returns false.
 
+### Problem approach
 In the main function , within the while loop we iterate through the values of i starting from zero to get the number which when appended to the the message gives us
 hash value less than  0x00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF and using the bytestoHex(byte[] bytes) and check(String st, int n) methods.
 
 Then we print the required number along with the time that the code took to get this nonce value.
+
+### Instructions to test the code
+1) Compile the code.
+2) Enter a String whose nonce value needs to be calculated.
+3) The Nonce value is shown on terminal along with the time taken to execute the code.
+
+
+
+<img width="1440" alt="Screenshot 1943-05-06 at 6 44 49 PM" src="https://user-images.githubusercontent.com/77124129/127329304-18108564-d123-4fed-9bba-a45ca9fee165.png">
+
 
 2) # Assignment 2
 ## Instructions to test the contract
